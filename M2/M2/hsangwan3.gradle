@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "edu.gatech.oad.antlab.pkg1.AntLabMain"
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName, 'Class-Path': '../../lib/resources.jar'
+    }
+}
