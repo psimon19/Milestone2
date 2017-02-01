@@ -1,5 +1,8 @@
 package edu.gatech.oad.antlab.person;
 
+import java.util.*;
+import java.util.stream.*;
+
 /**
  *  A simple class for person 4
  *  returns their name and a
@@ -31,7 +34,11 @@ public class Person4 {
      */
     private String calc(String input) {
       //Person 4 put your implementation here
-      return null;
+        return input.codePoints()
+            .map(s -> s + 1)
+            .collect(StringBuilder::new,
+                     StringBuilder::appendCodePoint, StringBuilder::append)
+            .toString();
     }
     
     /**
