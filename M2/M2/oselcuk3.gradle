@@ -1,6 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
+defaultTasks 'clean', 'jar'
+
 mainClassName = "edu.gatech.oad.antlab.pkg1.AntLabMain"
 
 dependencies {
